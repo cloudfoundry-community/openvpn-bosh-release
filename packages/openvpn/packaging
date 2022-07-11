@@ -5,10 +5,11 @@ set -u
 
 cpus=$( grep -c ^processor /proc/cpuinfo )
 
+OPENSSL_VERSION = openssl-*
 ( cd openssl
 
-  tar -xzf openssl-*.tar.gz
-  cd openssl-*
+  tar -xzf ${OPENSSL_VERSION}.tar.gz
+  cd {OPENSSL_VERSION}
 
   ./config \
     -DSSL_ALLOW_ADH \
@@ -20,10 +21,11 @@ cpus=$( grep -c ^processor /proc/cpuinfo )
   make install
 )
 
+LZO_VERSION = lzo-*
 ( cd lzo
 
-  tar -xzf lzo-*.tar.gz
-  cd lzo-*
+  tar -xzf ${LZO_VERSION}.tar.gz
+  cd ${LZO_VERSION}
 
   ./configure \
     --prefix=${BOSH_INSTALL_TARGET}/external/lzo \
@@ -32,10 +34,11 @@ cpus=$( grep -c ^processor /proc/cpuinfo )
   make install
 )
 
+OPENVPN_VERSION = openvpn-*
 ( cd openvpn
 
-  tar -xzf openvpn-*.tar.gz
-  cd openvpn-*
+  tar -xzf ${OPENVPN_VERSION}.tar.gz
+  cd ${OPENVPN_VERSION}
 
   export CFLAGS="-I${BOSH_INSTALL_TARGET}/external/openssl/include -Wl,-rpath=${BOSH_INSTALL_TARGET}/external/openssl/lib -L${BOSH_INSTALL_TARGET}/external/openssl/lib"
   export LZO_CFLAGS="-I${BOSH_INSTALL_TARGET}/external/lzo/include"
