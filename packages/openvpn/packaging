@@ -5,7 +5,7 @@ set -u
 
 cpus=$( grep -c ^processor /proc/cpuinfo )
 
-OPENSSL_VERSION = openssl-*
+OPENSSL_VERSION=$(ls openssl-*.tar.gz | awk -F. '{print $1}')
 ( cd openssl
 
   tar -xzf ${OPENSSL_VERSION}.tar.gz
@@ -21,7 +21,7 @@ OPENSSL_VERSION = openssl-*
   make install
 )
 
-LZO_VERSION = lzo-*
+LZO_VERSION = $(ls lzo-*.tar.gz | awk -F. '{print $1}')
 ( cd lzo
 
   tar -xzf ${LZO_VERSION}.tar.gz
@@ -34,7 +34,7 @@ LZO_VERSION = lzo-*
   make install
 )
 
-OPENVPN_VERSION = openvpn-*
+OPENVPN_VERSION = $(ls openvpn-*.tar.gz | awk -F. '{print $1}')
 ( cd openvpn
 
   tar -xzf ${OPENVPN_VERSION}.tar.gz
