@@ -9,7 +9,7 @@ cpus=$( grep -c ^processor /proc/cpuinfo )
 
   OPENSSL_VERSION=$(basename openssl-*.tar.gz .tar.gz)
   tar -xzf ${OPENSSL_VERSION}.tar.gz
-  cd {OPENSSL_VERSION}
+  cd ${OPENSSL_VERSION}
 
   ./config \
     -DSSL_ALLOW_ADH \
