@@ -7,7 +7,7 @@ cpus=$( grep -c ^processor /proc/cpuinfo )
 
 ( cd openssl
 
-  OPENSSL_VERSION=$(ls openssl-*.tar.gz | awk -F. '{print $1}')
+  OPENSSL_VERSION=$(basename openssl-*.tar.gz .tar.gz)
   tar -xzf ${OPENSSL_VERSION}.tar.gz
   cd {OPENSSL_VERSION}
 
@@ -23,7 +23,7 @@ cpus=$( grep -c ^processor /proc/cpuinfo )
 
 ( cd lzo
 
-  LZO_VERSION=$(ls lzo-*.tar.gz | awk -F. '{print $1}')
+  LZO_VERSION=$(basename lzo-*.tar.gz .tar.gz)
   tar -xzf ${LZO_VERSION}.tar.gz
   cd ${LZO_VERSION}
 
@@ -36,7 +36,7 @@ cpus=$( grep -c ^processor /proc/cpuinfo )
 
 ( cd openvpn
 
-  OPENVPN_VERSION=$(ls openvpn-*.tar.gz | awk -F. '{print $1}')
+  OPENVPN_VERSION=$(basename openvpn-*.tar.gz .tar.gz)
   tar -xzf ${OPENVPN_VERSION}.tar.gz
   cd ${OPENVPN_VERSION}
 
