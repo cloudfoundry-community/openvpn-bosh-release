@@ -1,6 +1,8 @@
 builds:
   057799c0-dc76-4903-6757-78d934cbd77f:
     version: 5.7.0
+  13829d44-6ce7-4d73-7e0b-151896c7d1ec:
+    version: 5.8.2
   15fc965f-f496-4e1e-9b3a-0a5aa99d4fbe:
     version: "1"
   1e11f6d3-b791-425c-71cc-846e593d444e:
