@@ -1,7 +1,7 @@
 lzo/lzo-2.10.tar.gz:
   size: 600622
-  object_id: 719b2aa3-eace-413d-6b6d-e87e80b7c914
-  sha: 4924676a9bae5db58ef129dc1cebce3baa3c4b5d
+  object_id: 0c86e727-9a45-4400-70ee-378b4fbc9cbb
+  sha: sha256:c0f892943208266f9b6543b3ae308fab6284c5c90e627931446fb49b4221a072
 openssl/openssl-1.1.1q.tar.gz:
   size: 10041698
   object_id: 626b8acb-4c47-4eb1-4b76-1270470fe282
