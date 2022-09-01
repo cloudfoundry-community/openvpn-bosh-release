@@ -1,6 +1,6 @@
 ---
 name: "openvpn"
 files:
-  - "lzo/*"
-  - "openssl/*"
-  - "openvpn/*"
+  - "lzo/*"        # from http://www.oberhumer.com/opensource/lzo/
+  - "openssl/*"    # from https://github.com/openssl/openssl/tags
+  - "openvpn/*"    # from https://openvpn.net/index.php/download/community-downloads.html
