@@ -1,0 +1,33 @@
+name: openvpn
+version: 5.8.5
+commit_hash: b350b60
+uncommitted_changes: false
+jobs:
+- name: openvpn
+  version: 1f2d2d755361cbaf97babf389d93deffadaa4e9b14a022bfd6aaecb952803f71
+  fingerprint: 1f2d2d755361cbaf97babf389d93deffadaa4e9b14a022bfd6aaecb952803f71
+  sha1: sha256:7bd86d886a1ba4f125ca048afd1f6f7b3da20f1eff594468088df7e1d0dc6fff
+  packages:
+  - openvpn
+- name: openvpn-client
+  version: 05f0100c75cc2c653fef9332ecfe72f226d34b4efc7f3645f3b6ff5cbd187194
+  fingerprint: 05f0100c75cc2c653fef9332ecfe72f226d34b4efc7f3645f3b6ff5cbd187194
+  sha1: sha256:3ba6b3dc543c6a977b23c8737a22b3d3cbe455689ddfe641958e2b10a3db4b04
+  packages:
+  - openvpn
+- name: openvpn-clients
+  version: c33ab10b8d93e198ed97b5fcbf98ab9c544ba9ffd39da3ff10b4e332f02b262a
+  fingerprint: c33ab10b8d93e198ed97b5fcbf98ab9c544ba9ffd39da3ff10b4e332f02b262a
+  sha1: sha256:e6a3bcabb148df84b48afd9df519bdef6c36f7662dec58636ec6e7fda3d0487d
+  packages:
+  - openvpn
+packages:
+- name: openvpn
+  version: ac3cf6e3431907de5adebb5b0404c4d1ed787ca7496b606aca386376de683665
+  fingerprint: ac3cf6e3431907de5adebb5b0404c4d1ed787ca7496b606aca386376de683665
+  sha1: sha256:02cf4b5e4b6554f2501d33056e1fce555ab528b69e1f5c118a4bee738e98d91c
+  dependencies: []
+license:
+  version: 84c35123832b2b40270879714d54e44819884aed0f993c024cdb31e4e4b8c731
+  fingerprint: 84c35123832b2b40270879714d54e44819884aed0f993c024cdb31e4e4b8c731
+  sha1: sha256:907010f7434f560ce5e794f7d59353977fcb0ffd9cfb57f82ab203e9ab556ce9
