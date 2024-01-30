@@ -36,6 +36,21 @@ cpus=$( grep -c ^processor /proc/cpuinfo )
   make install
 )
 
+( package=libcap
+  cd ${package}
+
+  package_dir=$(tar -tzf ${package}*.tar.gz | head -1 | cut -f1 -d'/')
+  tar -xzf ${package}*.tar.gz
+  cd ${package_dir}
+
+  ./configure \
+    --prefix=${BOSH_INSTALL_TARGET}/external/libcap \
+
+  make -j$cpus
+  make install
+)
+
+
 ( package=openvpn
   cd ${package}
 
@@ -46,9 +61,13 @@ cpus=$( grep -c ^processor /proc/cpuinfo )
   export CFLAGS="-I${BOSH_INSTALL_TARGET}/external/openssl/include -Wl,-rpath=${BOSH_INSTALL_TARGET}/external/openssl/lib -L${BOSH_INSTALL_TARGET}/external/openssl/lib"
   export LZO_CFLAGS="-I${BOSH_INSTALL_TARGET}/external/lzo/include"
   export LZO_LIBS="-L${BOSH_INSTALL_TARGET}/external/lzo/lib -llzo2"
+  export LIBCAPNG_CFLAGS="-I${BOSH_INSTALL_TARGET}/external/libcap/include"
+  export LIBCAPNG_LIBS="-L${BOSH_INSTALL_TARGET}/external/libcap/lib -lcap-ng"
 
   ./configure \
     --prefix=${BOSH_INSTALL_TARGET} \
+    --disable-dco \
+    --disable-lz4 \
     --disable-plugin-auth-pam
 
   make -j$cpus
